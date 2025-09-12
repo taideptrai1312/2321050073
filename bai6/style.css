@@ -1,14 +1,29 @@
 body{
+    background-color: black;
+    color: white;
+}
+.title{
+    color: white;
+    justify-content: center;
+    display: flex;
+    margin: 15px 0px;
+}
+.search{
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 10px;
+}
+.content{
     display: flex;
     justify-content: center;
     gap: 10px;
     background-color: black;
     color: rgb(255, 255, 255);
 }
+
 box1{
     width: 20%;
     height: 100%;
-
     padding: 10px;
     background-color: rgb(80, 79, 79);
     border-radius: 7px;
@@ -18,7 +33,7 @@ box1 ul {
     display: flex;
     gap: 15px;
     padding: 3px;
-    
+    justify-content: space-around;
 }
 
 box1 li {
@@ -34,9 +49,7 @@ box1 li {
     border-radius: 7px;
 }
 .the{
-    display: flex;
-    /*justify-content: center;
-    margin-left: -150px;*/
+    display: flex;  
     gap: 5px;
     font-size: 16px;
     margin: 7px 0px;
@@ -46,25 +59,58 @@ box1 li {
 .chu{
     font-size: 13px;
 }
-
-
-
-
-
-
-
-
-
-
 box2{
-    width: 50%;
+    width: 55%;
     display: flex;
     padding: 10px;
     border-radius: 7px;
     background-color: rgb(80, 79, 79);
+    justify-content: space-around;
 }
+box2 ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 3px;
+}
+box2 li {
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: rgb(100, 100, 100);
+}
+.the2 img{
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+}
+.the2{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 7px;
+    padding: 5px 30px 5px 5px;
+}
+.box2-the{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 box3{
-    width: 30%;
+    width: 25%;
     display: flex;
     background-color: rgb(80, 79, 79);
     border-radius: 7px;
