@@ -1,0 +1,29 @@
+body{
+    margin-top: 100px;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+.create{
+    display: flex;
+    justify-content: center;
+}
+.a{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+    margin: 20px;
+}
+.a input{
+    border: 0cap;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    width: 250px;
+}
+.login{
+    font-size: 80px;
+    margin-bottom: 40px;
+}
