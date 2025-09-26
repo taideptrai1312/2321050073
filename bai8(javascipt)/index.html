@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let thongTinDonHang = {
+            hoTen : "Pham Gia Tai",
+            sdt : "0961240976",
+            trangThai : true,
+        }
+        let sanPham = {
+                sp1 :{
+                    maSP : "caphe",
+                    tenSP : "Cà Phê",
+                    soLuong : "5",
+                    giaTien : 20000,
+                },
+                sp2 : {
+                    maSP : "matcha",
+                    tenSP : "Matcha",
+                    soLuong : "6",
+                    giaTien : "25000",
+                },
+                sp3 :{
+                    maSP : "trasua",
+                    tenSP : "Trà Sữa" ,
+                    soLuong : "8",
+                    giaTien : "50000",
+                },
+                trangThaitt : false,
+                diaChi: "Đông Ngạc, Hà Nội",
+            }
+        let tongTT = sanPham.sp1.soLuong * sanPham.sp1.giaTien 
+        + sanPham.sp2.soLuong * sanPham.sp2.giaTien 
+        + sanPham.sp3.soLuong * sanPham.sp3.giaTien ;
+        document.writeln("Tổng phải thanh toán: " + tongTT + "<br>");
+
+        //STRING
+        let hoTen = "Pham Gia Tai";
+        document.writeln(hoTen.length);
+
+        //lay chuoi
+        let myString = "Hello Tai";
+        //thay the
+        document.writeln(myString.replace("Hello", "Hi"));
+        // .slice() dem tu a den b-1
+        //thay chu hoa thanh chu thuong .to UpperCase()
+        document.writeln(myString.toLocaleLowerCase());
+        // indexOf (ki tu can tim kiem va xem no o vi tri nao)
+        // includes (tim kiem ki tu xem co kh) true/false
+        document.writeln(myString.indexOf("l"));
+        // tách chuỗi thành mảng 
+        document.writeln(myString.split('e'));
+        //kiem tra xem có bắt đầu bằng chữ 
+        document.writeln(myString.startsWith('Tai'));
+        // rút gọn số float .toFixed()
+        var pi = 3.14159;
+        document.writeln(pi.toFixed(2));
+        // kiểm tra số isNotaNumber
+        // document.writeln(isNaN(10));
+        // lấy ngày hiện tại () cụ thể('năm - tháng - ngày')
+            let toDay = new Date('2023-09-26');
+            document.writeln(toDay);
+            // lay nam : getFullYear
+            // lay thang: .getMonth
+            document.writeln(toDay.getMonth());
+            //lay ngay: .getDate
+            document.writeln(toDay.getDate());
+            //lay gio : .getHours
+            //lay phut : .getMinutes
+            //lay giay : .getSeconds
+    </script>
+</body>
+</html>
