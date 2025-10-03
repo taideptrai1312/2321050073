@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let d = new Date();
+        let theDay = d.getDay();
+        switch(theDay) {
+            case 5:
+                document.writeln("Finally Friday");
+                break;
+            case 6:
+                document.writeln("Super Saturday");
+                break;
+            case 0:
+                document.writeln("Sleepy Sunday");
+                break;
+            case 1:
+            case 2:
+            case 3:
+                document.writeln("I'm looking forward to this weekend!");
+                break;
+            default:
+                document.writeln("I'm looking forward to this weekend!");
+        }
+        for (let i = 1; i <=5; i++)
+        {
+            document.writeln(i + " Tài Moi nè!" +"<br>");
+        }
+        let danhSach = [' Đẹp Trai','Tài Moi Nè'];
+        let dem = 0;
+        for ( let i = 0; i < danhSach.length; i++)
+        {   
+            if(danhSach[i].toLowerCase().startsWith('tài') == true)
+                dem = dem + 1;
+        }
+        document.writeln(dem);
+        document.writeln('<br>');
+        let i = 0;
+        while (i<=10)
+        {
+            document.writeln("the Number is " + i + '<br>');
+            i=i+1;
+        }
+        // alert("Hello world!");
+        
+        // let result= confirm("Press a button");
+        // if ( result == true)
+        //     document.writeln("bấm ok");
+        // else 
+        //     document.writeln("bấm cancel");
+
+        // let result2 = prompt("Nhập họ và tên" , "Ví dụ: ABC");
+        // document.writeln(result2);
+
+        // function + Tên hàm(){
+        //     code logic
+        // }
+
+        function sayHello(){
+            document.writeln("Xin chào!");
+        }
+        let ten = prompt("Nhập họ và tên" , "Ví dụ: ABC");
+        let namSinh = prompt("Nhập năm sinh" , "Ví dụ: ABC");
+        function sayHello2(ten, namSinh){
+            document.writeln("Xin chào "+ ten +" "+ namSinh);
+        }
+        sayHello2(ten, namSinh);
+    </script>
+</body>
+</html>

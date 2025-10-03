@@ -73,16 +73,17 @@
                     }
                 }
             }
-
-        let a, b, c ;
-        a = 1 ;
-        b = 2 ;
-        c = 3 ;
-        let tong = diem[1]*0.6 + diem[2]*0.3 + diem [3]*0.1;
-        document.writeln(tong);
-        if (tong>8 && tong <=10){
+        let diemA, diemB, diemC ;
+        diemA = 8 ;
+        diemB = 9 ;
+        diemC = 11 ;
+        let tong = diemA*0.6 + diemB*0.3 + diemC*0.1;
+        if (diemA<0 || diemA>10 || diemB<0 || diemB>10 || diemC<0 || diemC>10)
+            document.writeln("Nhap sai diem! ");
+        else if (tong>8 && tong <=10){
             document.writeln('A');
-        }else if (tong>7 && tong <=8){
+        }
+            else if (tong>7 && tong <=8){
             document.writeln('B');
             }
             else if (tong>5 && tong <=7){
