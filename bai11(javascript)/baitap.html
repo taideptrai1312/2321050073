@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm</h1>
+    <div>
+        Nhập điểm A:
+        <input type="number" id="diemA">
+    </div>
+    <div>
+        Nhập điểm B:
+        <input type="number" id="diemB">
+    </div>
+    <div>
+        Nhập điểm C:
+        <input type="number" id="diemC">
+    </div>
+    <div>
+        <button onclick="tinhDiem()">Tính điểm</button>
+    </div>
+    <div>
+        Điểm chữ: <input type="text" id="ketQua" class="ketQua">
+    </div>
+
+
+    <script>
+        function tinhDiem(){
+            let diemA = parseFloat(document.getElementById('diemA').value);
+            let diemB = parseFloat(document.getElementById('diemB').value);
+            let diemC = parseFloat(document.getElementById('diemC').value);
+            let canhBao = '';
+            if (diemA<0 || diemA>10) {
+                canhBao += 'Vui lòng nhập lại điểm A!' + '<br>';
+            }
+            if (diemB<0 || diemB>10) {
+                canhBao += 'Vui lòng nhập lại điểm B!' + '<br>';
+            }
+            if (diemC<0 || diemC>10) {
+                canhBao += 'Vui lòng nhập lại điểm C!';
+            }
+            if (canhBao) {
+            alert(canhBao);
+            }
+            let tong = diemA*0.6 + diemB*0.3 + diemC*0.1;
+            let diemChu = "";
+            if (tong>8 && tong <=10){
+                diemChu = "A";
+            }
+            else if (tong>7 && tong <=8){
+                diemChu = "B";
+                }
+            else if (tong>5 && tong <=7){
+                    diemChu = "C";
+                }
+            else if(tong>4 && tong<=5){
+                    diemChu = "D";
+                }
+            else {
+                    diemChu = "Trượt";
+                }
+            document.getElementById("ketQua").value = diemChu;
+        }
+    </script>
+</body>
+</html>
