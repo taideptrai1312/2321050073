@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        flex-direction: column ;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column ;
+        background-color: aquamarine;
+        width: 800px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            Nhập số chiều cao:
+            <input type="number" id="chieuCao">
+        </div>
+        <div>
+            Nhập số cân nặng:
+            <input type="number" id="canNang">
+        </div>
+        <div>
+            <button onclick="tinhCS()">Tính chỉ số BMI</button>
+        </div>
+        <div>
+            <input type="number" id="ketQua" class="ketQua">
+        </div>
+        <div > <img class='anh'></div>
+    </div>
+    <script>
+        function tinhCS(){
+        let chieuCao= parseFloat(document.getElementById('chieuCao').value);
+        let canNang = parseFloat(document.getElementById('canNang').value);
+        let canhBao = '';
+        if (!chieuCao) {
+            canhBao += 'Vui lòng nhập chiều cao!';
+        }
+        if (!canNang) {
+            canhBao += 'Vui lòng nhập cân nặng!';
+        }
+        if (canhBao) {
+            alert(canhBao);
+        }
+        let csBMI = canNang / (chieuCao*chieuCao);
+        document.getElementById('ketQua').value = csBMI.toFixed(1);
+        if (csBMI < 18.5)
+        {document.getElementsByClassName('anh')[0].src = '18.5.jpg';}
+        else if(csBMI>=18.5 && csBMI <25)
+            {document.getElementsByClassName('anh')[0].src = '18.5-24.9.jpg';}
+        else if(csBMI>=25 && csBMI <30)
+            {document.getElementsByClassName('anh')[0].src = '25-29.9.jpg';}
+        else if(csBMI>=30 && csBMI <25)
+            {document.getElementsByClassName('anh')[0].src = '30-39.9.jpg';}
+        else
+            {document.getElementsByClassName('anh')[0].src = '40.jpg';}
+        
+    }
+    </script>
+</body>
+</html>
