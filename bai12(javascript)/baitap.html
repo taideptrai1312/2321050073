@@ -29,20 +29,20 @@
         <div class="left">
             <div class="a">
                 Nhập số chiều cao:
-                <input type="number" id="chieuCao">
+                <input type="number" id="chieuCao" style="border-radius: 5px;">
             </div>
             <div class="a">
                 Nhập số cân nặng :
-                <input type="number" id="canNang">
+                <input type="number" id="canNang" style="border-radius: 5px;">
             </div>
             <div class="a">
-                <button onclick="tinhCS()">Tính chỉ số BMI</button>
+                <button onclick="tinhCS()" style="border-radius: 5px;padding: 5px;">Tính chỉ số BMI</button>
             </div>
             <div>
-                <input type="number" id="ketQua" class="ketQua">
+                <input type="number" id="ketQua" class="ketQua" style="border-radius: 5px;border: none; padding: 5px;background-color: aquamarine;size: 20px;">
             </div>
         </div>
-        <div > <img class='anh'></div>
+        <div > <img class='anh' width="200px" height="500px"></div>
     </div>
     <script>
         function tinhCS(){
@@ -66,7 +66,7 @@
             {document.getElementsByClassName('anh')[0].src = '18.5-24.9.jpg';}
         else if(csBMI>=25 && csBMI <30)
             {document.getElementsByClassName('anh')[0].src = '25-29.9.jpg';}
-        else if(csBMI>=30 && csBMI <25)
+        else if(csBMI>=30 && csBMI <39.9)
             {document.getElementsByClassName('anh')[0].src = '30-39.9.jpg';}
         else
             {document.getElementsByClassName('anh')[0].src = '40.jpg';}
