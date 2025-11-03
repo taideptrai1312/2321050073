@@ -14,26 +14,33 @@
     .container{
         display: flex;
         align-items: center;
-        flex-direction: column ;
+        justify-content: space-around;
         background-color: aquamarine;
         width: 800px;
+        padding: 20px 0px;
+        border-radius: 5px;
+    }
+    .a{
+        margin: 10px 0px;
     }
 </style>
 <body>
     <div class="container">
-        <div>
-            Nhập số chiều cao:
-            <input type="number" id="chieuCao">
-        </div>
-        <div>
-            Nhập số cân nặng:
-            <input type="number" id="canNang">
-        </div>
-        <div>
-            <button onclick="tinhCS()">Tính chỉ số BMI</button>
-        </div>
-        <div>
-            <input type="number" id="ketQua" class="ketQua">
+        <div class="left">
+            <div class="a">
+                Nhập số chiều cao:
+                <input type="number" id="chieuCao">
+            </div>
+            <div class="a">
+                Nhập số cân nặng :
+                <input type="number" id="canNang">
+            </div>
+            <div class="a">
+                <button onclick="tinhCS()">Tính chỉ số BMI</button>
+            </div>
+            <div>
+                <input type="number" id="ketQua" class="ketQua">
+            </div>
         </div>
         <div > <img class='anh'></div>
     </div>
