@@ -154,3 +154,17 @@ footer {
   margin-top: 50px;
   border-top: solid rgb(113, 110, 110) 2px;
 }
+.a{
+  display: flex;
+}
+.b{
+  margin-right: 100px;
+  margin-left: 20px;
+  font-size: 20px;
+
+}
+.b div{
+  display: flex;
+  margin-right: 1px;
+  padding-left: 5px;
+}
