@@ -1,24 +1,130 @@
-<?php
-    // cookie
-    #lưu ở phía người dùng
-    # dùng cho những thông tin ít quan trọng
-    $cookieName = "user";
-    $cookieValue = "Jonny Moi";
-    // 86400 = 30 ngay
-    setcookie($cookieName, $cookieValue, time()+(86400), "/");
+<!DOCTYPE html>
+<html lang="en">
 
-    if(isset($_COOKIE[$cookieName]) ){
-        echo "cookie đã tồn tại";
-    }
-    else{
-        echo "cookie chưa tồn tại"
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
 
-    // session
-    # Thông tin đăng nhập, giỏ hàng,....
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0 40px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: crimson;
+            padding: 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        main {
+            width: 95%;
+            margin: 80px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <?php
     session_start();
-    $_SESSION["name"] = "Jonny Moi 123";
+    if (!isset($_SESSION["username"])) {
+        header("location: login.php");
+    }
+    ?>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.php?page_layout=trangchu">Trang chủ</a></li>
+                <li><a href="index.php?page_layout=phim">Phim</a></li>
+                <li><a href="index.php?page_layout=theloai">Thể loại</a></li>
+                <li><a href="index.php?page_layout=quocgia">Quốc gia</a></li>
+                <li><a href="index.php?page_layout=nguoidung">Người dùng</a></li>
+            </ul>
+            <ul>
+                <li><?php echo "Xin chào " . $_SESSION["username"]; ?></li>
+                <li><a href="index.php?page_layout=dangxuat">Đăng xuất</a></li>
+            </ul>
+        </nav>
 
-    echo $_SESSION["name"];
-    
-?>
+
+    </header>
+    <main>
+
+        <?php
+        if (isset($_GET['page_layout'])) {
+            switch ($_GET['page_layout']) {
+                case 'trangchu':
+                    include "trangchu.php";
+                    break;
+                case 'phim':
+                    include "phim.php";
+                    break;
+                case 'theloai':
+                    include "theloai.php";
+                    break;
+                case 'quocgia':
+                    include "quocgia.php";
+                    break;
+                case 'nguoidung':
+                    include "nguoidung.php";
+                    break;
+                case 'themnguoidung':
+                    include 'themnguoidung.php';
+                    break;
+                case 'capnhatnguoidung':
+                    include 'capnhatnguoidung.php';
+                    break;
+                case 'themphim':
+                    include 'themphim.php';
+                    break;
+                case 'capnhatphim':
+                    include 'capnhatphim.php';
+                    break;
+                case 'themtheloai':
+                    include 'themtheloai.php';
+                    break;
+                case 'capnhattheloai':
+                    include 'capnhattheloai.php';
+                    break;
+                case 'themquocgia':
+                    include 'themquocgia.php';
+                    break;
+                case 'capnhatquocgia':
+                    include 'capnhatquocgia.php';
+                    break;
+                case 'dangxuat':
+                    break;
+            }
+        } else {
+            include 'trangchu.php';
+        }
+
+
+        ?>
+    </main>
+</body>
+
+</html>

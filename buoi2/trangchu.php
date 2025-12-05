@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <style>
+        div {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
-<body>
-    <?php
-    session_start();
-    if(!isset($_SESSION["name"]))
 
-    ?>
-    <h1>Trang chủ</h1>
-    <?php
-     echo "xin chao " . $_SESSION["name"];
-    ?>
+<body>
+
+
+
+    <div>
+        <h1><?php echo "Xin chào " . $_SESSION["username"]; ?></h1>
+    </div>
+
+
+
 </body>
+
 </html>
